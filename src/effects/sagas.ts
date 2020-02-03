@@ -29,6 +29,7 @@ export function* uploadFileSaga(action: { payload: IInitialFormData }) {
         });
     };
     const response = yield call(apiCall);
+    console.log("response", response);
     yield put(ProcessFileSuccess(cedula));
   } catch (error) {
     yield put(ProcessFileError(error));

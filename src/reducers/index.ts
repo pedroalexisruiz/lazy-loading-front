@@ -7,7 +7,6 @@ export const lazyLoading: Reducer<IState> = createReducer(defaultState, {
   [Actions.ProcessFileSuccess.type]: processFileSuccess
 });
 
-function processFileSuccess(state: IState, action: Actions.IInitialFormData) {
-  console.log(action.cedula);
-  state.cedula = action.cedula;
+function processFileSuccess(state: IState, action: any) {
+  state.cedula = action.payload;
 }
